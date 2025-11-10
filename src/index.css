@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* CodeAtlas Dark Theme */
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+
+    --card: 217 33% 17%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 217 33% 17%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 193 100% 50%;
+    --primary-foreground: 222 47% 11%;
+
+    --secondary: 263 70% 50%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 157 100% 50%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 25%;
+    --input: 217 33% 25%;
+    --ring: 193 100% 50%;
+
+    --radius: 0.5rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(193 100% 50%), hsl(263 70% 50%));
+    --gradient-accent: linear-gradient(135deg, hsl(263 70% 50%), hsl(157 100% 50%));
+    --gradient-hero: linear-gradient(180deg, hsl(222 47% 11%), hsl(217 33% 17%));
+    
+    /* Shadows */
+    --shadow-glow-cyan: 0 0 30px hsl(193 100% 50% / 0.3);
+    --shadow-glow-purple: 0 0 30px hsl(263 70% 50% / 0.3);
+    --shadow-glow-green: 0 0 30px hsl(157 100% 50% / 0.3);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
